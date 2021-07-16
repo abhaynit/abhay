@@ -1,0 +1,1 @@
+{"Chhole Kulche": 20, "Dosa": 50, "Egg Curry": 90, "Litti Chokha": 10, "Momos": 25, "Rajma Chawal": 26, "Thukpa": 45, "Vada Pao": 10, "dfdf": "45", "roti": 5, "samoosa": "23"}
