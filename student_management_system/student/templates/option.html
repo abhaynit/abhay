@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("{% static 'f.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: 1400px 670px;
+        }
+    </style>
+</head>
+<body align=center style="padding-top: 50px;" bgcolor="cyan">
+    <h3 align="right" ><a href="/logout">LOGOUT</a></h3>
+    
+    <div>
+        <h2><B>SELECT THE  OPTION FROM THE GIVEN MENU</B></h2><br><br>
+        <Table align="center" border="2" style="background-color: lightgreen;" width=800px>
+            <tr>
+
+                <td> <a href="/register">REGISTRATION PAGE</a></td>
+                <td><a href="/fetch">SHOW RECORD</a></td>
+                <td><a href="/delete">DELETE RECORD</a></td>
+                <td><a href="/update">UPDATE RECORD</a></td>
+                <td><a href="/sall">SHOW ALL RECORD</a></td>
+
+
+            </tr>
+        </Table>
+      
+       {{er}}
+       
+    </div>
+    {% for x in details %}
+    {{x.reg_no}}
+    {% endfor %}
+
+    <audio src="{% static 'as.mp3' %}">click here</audio>
+    
+</body>
+</html>

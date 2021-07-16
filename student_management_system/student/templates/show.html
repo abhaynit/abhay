@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a{
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body  style="padding-top: 50px;" bgcolor="cyan">
+    <table align="center" style="background-color: greenyellow;"  width="1100 px">
+        <tr>
+            <td align="left"><h5><a align ="left" href="/fetch">FIND ANOTHER</a></h5></td>
+            <td align="right"> <h5><a align ="right" href="/home">HOME PAGE</a></h5></td>
+        </tr>
+    </table>
+   
+
+    <br><br><br><br><br>
+    
+    <table border="2" align="center" width=600px align="center">
+    <div>
+       <tr>
+           <td>REG_NO</td>
+           <td>BRANCH</td>
+           <td>NAME</td>
+           <td>IMG</td>
+       </tr>
+        {% for x in img  %}
+        <div>
+           
+                <tr>
+                    <td align="center">{{x.reg_no }}</td>
+                    <td align="center">{{x.branch |upper}}</td>
+                    <td align="center"> {{x.name |upper}}</td>
+                    <td align="center"><img src="{{ x.image.url }}" alt="" height="100px" width="100px"></td>              
+               
+                </tr>
+            
+            
+        </div>    
+        {% endfor %}
+    </div>
+
+</table>   
+
+</body>
+</html>

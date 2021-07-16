@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a{
+            padding-left: 20px;
+        }
+        .image{
+            background-color: goldenrod;
+            width: 500px;
+            float: center;
+        }
+    </style>
+</head>
+<body  style="padding-top: 50px;" bgcolor="cyan">
+    <h1 align="center">UPDATE YOUR DETAIL</h1>
+    <h3><a href="/home">HOME PAGE</a></h3>
+    <div>
+
+        {% for x in details %}   
+        <div class="other" align="left">
+
+            <form align="center" action="" method="POST" enctype="multipart/form-data" >
+                {% csrf_token %}
+                REG_NO : <input type="number" name="reg" id="" value= "{{x.reg_no}}" ><br>
+                NAME : <input type="text" name="name" id="" value="{{x.name |upper}}"><br>
+                BRANCH : <input type="text" name="branch" id="" value="{{x.branch |upper}}"><br>
+    
+                <input type="submit" value="submit">
+                
+            </form>
+
+        </div>
+
+        <div  class="image">
+            <img align="center" src="{{ x.image.url }}" alt="" height="100px" width="100px"> &nbsp &nbsp <a href="/img">CLICK HERE TO  UPDATE IMAGE</a>
+        </div>
+
+    </div>
+
+    
+        
+       
+    {% endfor %}
+    
+</body>
+</html>

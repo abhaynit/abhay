@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("{% static 'e.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: 1400px 670px;
+        }
+    </style>
+</head>
+<body  style="padding-top: 50px;" bgcolor="cyan">
+    <h5><a align ="left" href="/home/">HOME PAGE</a></h5>
+    <H1 align="center">ENTER YOUR DETAIL</H1>
+    <div width="30%" style="background-color: tomato;">
+        <form align="center" action="" method="POST" enctype="multipart/form-data" width="500px" novalidate >
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit"  value="click">
+        </form>
+    </div>
+        
+    
+    
+    
+</body>
+</html>

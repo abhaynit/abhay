@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("{% static 'a.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: 1400px 670px;
+        }
+    </style>
+</head>
+<body align="center">
+
+    
+  
+    <h1>LOGIN PAGE</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        REG_NO : <input type="name" name="reg" id="reg">
+        <input type="submit" value="click">
+    </form>
+    <h3 style="padding-left: 700px;" > <font style="color: blue" >NEW USER ?</font> </h3>
+    <h3 style="padding-left: 700px;" ><a  href="/register/"> <font style="color: brown;" >CLICK HERE TO REGISTER</a></font> </h3>
+</body>
+</html>

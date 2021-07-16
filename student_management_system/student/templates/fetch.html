@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body  style="padding-top: 50px;" bgcolor="cyan">
+    <a href="\home">HOME PAGE</a>
+    
+   
+            <H3 align ="center">FILL THE FORM TO {{name}} THE STUDENT</H3>
+            <div  >
+
+
+                <table align="center" style="background-color: rgb(46, 46, 42);" style="width: 0pt;">
+                    <tr>
+                        <td>
+                            <form style="background-color : pink;" action="" method="POST" enctype="multipart/form-data"  novalidate>
+                                {% csrf_token %}
+                                ENTER THE REG_NO : <input type="number" name="name" id="name" value="2019105194">
+                                <input type="submit" value="click">
+                        
+                            </form>    
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3 align="center">{{err}}</h3>
+           
+      
+
+    
+</body>
+</html>
